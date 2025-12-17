@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Professional Digital Marketing Agency">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Digital Market Co. - Growth & SEO Agency</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <style>
+      /* --- DYNAMIC CONTACT SECTION STYLES --- */
+      #contact {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Background Decoration */
+      #contact::before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(75,142,241,0.05) 0%, rgba(75,142,241,0) 70%);
+        top: -100px;
+        right: -100px;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      /* Form Container - Glass-like Lifted Card */
+      .contact-card {
+        background: #ffffff;
+        border-radius: 30px;
+        padding: 50px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        position: relative;
+        z-index: 1;
+        transition: transform 0.3s ease;
+      }
+      
+      .contact-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Floating Inputs Group */
+      .form-group {
+        position: relative;
+        margin-bottom: 25px;
+      }
+
+      .form-control, .form-select {
+        height: 55px;
+        border: 2px solid #f1f1f1;
+        border-radius: 15px;
+        padding: 0 20px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #2a2a2a;
+        transition: all 0.3s ease;
+        background: transparent;
+      }
+
+      .form-control textarea {
+        height: auto;
+        padding-top: 20px;
+      }
+
+      /* Focus Effects */
+      .form-control:focus, .form-select:focus {
+        border-color: #4b8ef1;
+        box-shadow: 0 10px 20px rgba(75,142,241,0.1);
+        background: #fff;
+      }
+
+      /* Custom Placeholder/Label Animation (simulated with CSS) */
+      .form-control::placeholder {
+        color: #aaa;
+        transition: all 0.3s;
+      }
+      .form-control:focus::placeholder {
+        transform: translateX(5px);
+        opacity: 0.7;
+      }
+
+      /* Dynamic Submit Button */
+      .btn-dynamic {
+        width: 100%;
+        padding: 18px;
+        border-radius: 50px;
+        background: linear-gradient(to right, #4b8ef1 0%, #3db3e6 100%);
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(75,142,241,0.3);
+      }
+
+      /* Shine Effect on Hover */
+      .btn-dynamic::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+        transition: 0.5s;
+      }
+
+      .btn-dynamic:hover::before {
+        left: 100%;
+      }
+
+      .btn-dynamic:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 35px rgba(75,142,241,0.4);
+      }
+
+      .btn-dynamic:active {
+        transform: scale(0.98);
+      }
+
+      /* Success Message Pop-up */
+      #form-message {
+        display: none;
+        padding: 25px;
+        border-radius: 15px;
+        background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+        color: #155724;
+        text-align: center;
+        margin-bottom: 30px;
+        animation: slideDown 0.5s ease forwards;
+        box-shadow: 0 10px 20px rgba(212, 237, 218, 0.4);
+      }
+
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+
+  </head>
+
+<body>
+
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png" alt="Digital Market Co">
+            </a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="#about">About</a></li>
+              <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
+              <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+              <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li>
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Grow Your Business With Expert Digital Marketing</h2>
+                    <p>We provide top-notch digital marketing strategies including SEO, PPC, and Social Media Management to help you reach your audience and increase revenue.</p>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="white-button scroll-to-section">
+                      <a href="#contact">Contact Us <i class="fas fa-envelope"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/main.png" alt="Digital Marketing Growth">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Amazing <em>Services &amp; Strategies</em> for you</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Our team of experts delivers data-driven results to scale your brand effectively.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="service-item first-service">
+            <div class="icon"></div>
+            <h4>SEO Optimization</h4>
+            <p>Improve your ranking on search engines and drive organic traffic to your website.</p>
+            <div class="text-button">
+              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item second-service">
+            <div class="icon"></div>
+            <h4>Social Media Marketing</h4>
+            <p>Engage with your audience on platforms like Facebook, Instagram, and LinkedIn.</p>
+            <div class="text-button">
+              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item third-service">
+            <div class="icon"></div>
+            <h4>Content Strategy</h4>
+            <p>High-quality content creation that resonates with your target market and builds authority.</p>
+            <div class="text-button">
+              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item fourth-service">
+            <div class="icon"></div>
+            <h4>PPC Advertising</h4>
+            <p>Maximize your ROI with targeted Pay-Per-Click campaigns on Google and Social Media.</p>
+            <div class="text-button">
+              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h4>About <em>What We Do </em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>We are a full-service digital marketing agency committed to growing your online presence.</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#">Data Driven Analysis</a></h4>
+                <p>We use advanced analytics to track performance.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#">24/7 Support &amp; Help</a></h4>
+                <p>Always here to answer your marketing queries.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#">ROI Focused</a></h4>
+                <p>Strategies designed to maximize your return.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#">Brand Awareness</a></h4>
+                <p>Making your brand known to the world.</p>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <p>Let us handle your digital strategy so you can focus on running your business.</p>
+              <div class="gradient-button">
+                <a href="#contact">Start Your Campaign Today</a>
+              </div>
+              <span>*Free consultation included</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="right-image">
+            <img src="assets/images/about-right-dec.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pricing" class="pricing-tables">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>We Have The Best <em>Prices</em> For Your Needs</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Choose a plan that fits your business goals and budget.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-regular">
+            <span class="price">9000 </span>
+            <h4>Starter Package</h4>
+            <div class="icon">
+              <img src="assets/images/pricing-table-01.png" alt="">
+            </div>
+            <ul>
+              <li>SEO Audit</li>
+              <li>5 Social Media Posts/mo</li>
+              <li class="non-function">PPC Management</li>
+              <li class="non-function">Content Blog Posts</li>
+              <li class="non-function">Weekly Reports</li>
+              <li class="non-function">Competitor Analysis</li>
+            </ul>
+            <div class="border-button">
+              <a href="#contact">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-pro">
+            <span class="price">12000</span>
+            <h4>Growth Package</h4>
+            <div class="icon">
+              <img src="assets/images/pricing-table-01.png" alt="">
+            </div>
+            <ul>
+              <li>Advanced SEO</li>
+              <li>15 Social Media Posts/mo</li>
+              <li>PPC Setup & Mgmt</li>
+              <li>2 Blog Posts/mo</li>
+              <li class="non-function">Weekly Reports</li>
+              <li class="non-function">Competitor Analysis</li>
+            </ul>
+            <div class="border-button">
+              <a href="#contact">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-regular">
+            <span class="price">25000</span>
+            <h4>Professional</h4>
+            <div class="icon">
+              <img src="assets/images/pricing-table-01.png" alt="">
+            </div>
+            <ul>
+              <li>Full SEO Suite</li>
+              <li>Daily Social Posts</li>
+              <li>PPC Management</li>
+              <li>4 Blog Posts/mo</li>
+              <li>Weekly Reports</li>
+              <li>Competitor Analysis</li>
+            </ul>
+            <div class="border-button">
+              <a href="#contact">Select Plan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="contact" class="section">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h4>Start Your <em>Journey</em> With Us</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Ready to scale? We work with genuine businesses looking for real, measurable growth.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-8 offset-lg-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="contact-card">
+            
+            <div id="form-message">
+                <h4><i class="fas fa-check-circle"></i> Message Sent Successfully!</h4>
+                <p>Thank you for contacting Digital Market Co. Our team will review your project and get back to you within 24 hours.</p>
+            </div>
+
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                
+                <input type="hidden" name="access_key" value="e39d6d0e-a104-4e10-9718-0d721846e5bc"> 
+                
+                <input type="hidden" name="subject" value="New Lead from Digital Market Co. Website">
+                <input type="hidden" name="from_name" value="Digital Market Co. Website">
+
+                <div class="row">
+                    <div class="col-md-6 wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.7s">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.7s">
+                        <div class="form-group">
+                            <input type="text" name="company" class="form-control" placeholder="Company Name" required>
+                        </div>
+                    </div>
+                    <div class="col-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.9s">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="col-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.1s">
+                        <div class="form-group">
+                            <select name="service" class="form-select" required>
+                                <option value="" disabled selected>Select Your Primary Goal</option>
+                                <option value="Generate More Leads">Generate More Leads</option>
+                                <option value="Increase E-commerce Sales">Increase E-commerce Sales</option>
+                                <option value="Premium Branding & Web Design">Premium Branding & Web Design</option>
+                                <option value="International Expansion">International Expansion</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.3s">
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your project budget and timeline..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.5s">
+                        <button type="submit" id="submitBtn" class="btn-dynamic">
+                            REQUEST PROPOSAL <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>Join our mailing list to receive the latest marketing trends</h4>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-3">
+          <form id="search" action="#" method="GET">
+            <div class="row">
+              <div class="col-lg-6 col-sm-6">
+                <fieldset>
+                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6 col-sm-6">
+                <fieldset>
+                  <button type="submit" class="main-button">Subscribe Now <i class="fa fa-angle-right"></i></button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>Contact Us</h4>
+            <p><a href="#">010-020-0340</a></p>
+            <p><a href="#">info@digitalmarketco.com</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">SEO</a></li>
+              <li><a href="#">Social Media</a></li>
+              <li><a href="#">PPC Ads</a></li>
+              <li><a href="#">Content Marketing</a></li>
+              <li><a href="#">Email Marketing</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Branding</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>Digital Market Co.</h4>
+            <div class="logo">
+              <img src="assets/images/white-logo.png" alt="">
+            </div>
+            <p>Your partner in digital growth. We help businesses scale through effective marketing strategies.</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p>Copyright © 2025 Digidrive . All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const messageBox = document.getElementById('form-message');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+            
+            // Change button text to indicate loading
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> SENDING...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    // Success!
+                    form.style.display = 'none'; // Hide form
+                    messageBox.style.display = 'block'; // Show success message
+                } else {
+                    console.log(response);
+                    alert("Something went wrong. Please try again.");
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                alert("Something went wrong. Please check your internet connection.");
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
+  </script>
+</body>
+</html>
